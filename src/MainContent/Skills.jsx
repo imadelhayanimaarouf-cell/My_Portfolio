@@ -19,7 +19,7 @@ import {
   SiNpm,
 } from "react-icons/si";
 
-import { VscVscode } from "react-icons/vsc"; // Official VS Code icon
+import { VscVscode } from "react-icons/vsc";
 
 export default function Skills() {
   const skills = [
@@ -51,8 +51,8 @@ export default function Skills() {
           name: "Shadcn/ui",
           icon: (
             <svg
-              width="32"
-              height="32"
+              width="24" // Adjusted size for fit
+              height="24"
               viewBox="0 0 256 256"
               className="text-white"
             >
@@ -77,8 +77,8 @@ export default function Skills() {
           name: "Framer Motion",
           icon: (
             <svg
-              width="32"
-              height="32"
+              width="24" // Adjusted size for fit
+              height="24"
               viewBox="0 0 256 256"
               className="text-white"
             >
@@ -126,7 +126,7 @@ export default function Skills() {
         {
           name: "UML",
           icon: (
-            <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-xs font-bold text-gray-400">
+            <div className="w-7 h-7 bg-gray-700 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400">
               UML
             </div>
           ),
@@ -134,7 +134,7 @@ export default function Skills() {
         {
           name: "MERISE",
           icon: (
-            <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-xs font-bold text-gray-400">
+            <div className="w-7 h-7 bg-gray-700 rounded-lg flex items-center justify-center text-[8px] font-bold text-gray-400">
               MERISE
             </div>
           ),
@@ -146,35 +146,55 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 px-6 bg-gray-900 min-h-screen flex items-center"
+      className="min-h-screen flex items-center justify-center px-6 bg-gray-900 py-10 [@media(max-height:740px)]:py-5"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
         {/* Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-4">
+        <div className="text-center mb-10 [@media(max-height:740px)]:mb-6 [@media(max-height:660px)]:mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-3 [@media(max-height:740px)]:text-5xl">
             My{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Skills
             </span>
           </h2>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className="
+            grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+            gap-6 [@media(max-height:740px)]:gap-4 [@media(max-height:660px)]:gap-3
+          "
+        >
           {skills.map((section) => (
             <div
               key={section.category}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
+              className="
+                bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl 
+                p-6 hover:border-cyan-500/50 transition-all duration-300
+                [@media(max-height:740px)]:p-4 [@media(max-height:660px)]:p-3
+              "
             >
-              <h3 className="text-xl font-bold text-cyan-400 mb-6">
+              <h3
+                className="
+                  text-xl font-bold text-cyan-400 mb-4 
+                  [@media(max-height:740px)]:mb-3 [@media(max-height:740px)]:text-lg
+                  [@media(max-height:660px)]:mb-2
+                "
+              >
                 {section.category}
               </h3>
-              <div className="space-y-5">
+
+              <div className="space-y-3 [@media(max-height:740px)]:space-y-2 [@media(max-height:660px)]:space-y-1">
                 {section.items.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-4">
-                    <div className="text-3xl flex-shrink-0">{skill.icon}</div>
-                    <span className="text-gray-200 text-lg">{skill.name}</span>
+                  <div key={skill.name} className="flex items-center gap-3">
+                    <div className="text-2xl flex-shrink-0 [@media(max-height:740px)]:text-xl">
+                      {skill.icon}
+                    </div>
+                    <span className="text-gray-200 text-lg [@media(max-height:740px)]:text-base [@media(max-height:660px)]:text-sm">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>

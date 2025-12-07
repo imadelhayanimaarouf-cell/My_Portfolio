@@ -5,66 +5,65 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 px-6 bg-gray-950 min-h-screen flex items-center"
+      className="min-h-screen flex items-center justify-center px-6 bg-gray-950 py-10 md:py-12 [@media(max-height:740px)]:py-8"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Left Side - Text */}
-        <div className="text-left space-y-8">
+        <div className="text-left space-y-6 [@media(max-height:740px)]:space-y-4">
           <div>
-            <h2 className="text-5xl md:text-7xl font-black text-white leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight [@media(max-height:740px)]:text-5xl">
               About{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
                 Me
               </span>
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mt-4 rounded-full"></div>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mt-3 rounded-full"></div>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            Hello! I’m Imad, a passionate junior full-stack web developer at the
-            beginning of an exciting journey.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+            Hello! I’m Imad, a junior full-stack web developer at the start of
+            my journey.
           </p>
 
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            I love building web applications that are functional, fast, and easy
-            to maintain. Whether it's crafting pixel-perfect UIs with React &
-            Tailwind or building robust backends with Node.js, I enjoy every
-            part of the process.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+            I enjoy creating web applications that are not only functional but
+            also efficient and easy to maintain. I explore a variety of
+            technologies across front-end and back-end development, always
+            applying clean code principles.
           </p>
 
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            I'm driven by clean code, continuous learning, and collaboration.
-            Every project is an opportunity to grow and create something
-            meaningful.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+            I’m motivated by teamwork, continuous learning, and improving my
+            skills every day to deliver high-quality solutions.
           </p>
 
           {/* Social Links + Download CV */}
-          <div className="flex flex-col sm:flex-row gap-6 pt-6">
+          <div className="flex flex-col sm:flex-row gap-5 pt-4 [@media(max-height:740px)]:pt-2">
             {/* Social Icons */}
-            <div className="flex gap-5">
+            <div className="flex gap-4">
               <a
-                href="https://linkedin.com/in/your-linkedin" // Change this
+                href="https://www.linkedin.com/in/imad-el-hayani-43939b399" // Change this
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-800 rounded-full text-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:scale-110 transition-all duration-300 border border-gray-700"
+                className="p-3.5 bg-gray-800 rounded-full text-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:scale-110 transition-all duration-300 border border-gray-700"
               >
-                <FaLinkedin size={28} />
+                <FaLinkedin size={24} />
               </a>
               <a
-                href="https://github.com/your-github" // Change this
+                href="https://github.com/imadelhayanimaarouf-cell" // Change this
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 bg-gray-800 rounded-full text-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:scale-110 transition-all duration-300 border border-gray-700"
+                className="p-3.5 bg-gray-800 rounded-full text-cyan-400 hover:bg-cyan-500/20 hover:text-white hover:scale-110 transition-all duration-300 border border-gray-700"
               >
-                <FaGithub size={28} />
+                <FaGithub size={24} />
               </a>
             </div>
 
             {/* Download CV Button */}
             <a
-              href="/Imad_ElHayani_CV.pdf" // Put your CV in /public folder
+              href="/CVImadElhayaniMaarouf.pdf" // Put your CV in /public folder
               download="Imad_ElHayani_Maarouf_CV.pdf"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-base md:text-lg rounded-full hover:shadow-2xl hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
             >
               <FaDownload />
               Download CV
@@ -79,13 +78,19 @@ export default function About() {
 
             <div className="relative bg-gray-900 p-2 rounded-3xl">
               <img
-                src="/your-photo.jpg" // Put your photo in public/
+                src="/AbPic.jpg" // Put your photo in public/
                 alt="Imad El Hayani Maarouf"
-                className="w-80 h-96 md:w-96 md:h-[500px] object-cover rounded-3xl shadow-2xl"
+                className="
+                  object-cover rounded-3xl shadow-2xl
+                  w-64 h-80 sm:w-72 sm:h-96 md:w-80 md:h-[450px] 
+                  [@media(max-height:740px)]:w-60 [@media(max-height:740px)]:h-72
+                  [@media(max-height:660px)]:w-52 [@media(max-height:660px)]:h-64
+                "
               />
             </div>
 
-            <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
+            {/* This is the badge you wanted to keep */}
+            <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-lg">
               Available for work
             </div>
           </div>

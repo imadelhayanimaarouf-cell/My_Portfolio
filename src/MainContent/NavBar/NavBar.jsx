@@ -1,3 +1,4 @@
+// NavBar.jsx (copy/paste)
 import React, { useState } from "react";
 
 export default function NavBar() {
@@ -11,9 +12,9 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/95 backdrop-blur-lg border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-5">
-        <div className="flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-20 bg-gray-950/95 backdrop-blur-lg border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 h-full">
+        <div className="flex items-center justify-between h-full">
           {/* Logo - IMAD */}
           <a
             href="#home"
@@ -32,7 +33,7 @@ export default function NavBar() {
                   className="text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-200 relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
             </div>
@@ -51,6 +52,7 @@ export default function NavBar() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-gray-300 hover:text-cyan-400"
+              aria-label="Toggle menu"
             >
               {!isMenuOpen ? (
                 <svg
@@ -87,7 +89,7 @@ export default function NavBar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-6 pb-4 border-t border-gray-800 pt-6">
+          <div className="md:hidden pb-4 border-t bg-gray-950/95 p-8  rounded-xl border-gray-800 pt-6">
             <div className="flex flex-col space-y-5">
               {navLinks.map((link) => (
                 <a

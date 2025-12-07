@@ -4,25 +4,25 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-6 bg-gray-950 min-h-screen flex items-center justify-center"
+      className="min-h-screen flex items-center justify-center px-6 bg-gray-950 py-10 md:py-12"
     >
       <div className="text-center max-w-4xl mx-auto">
         {/* Main Title */}
-        <h2 className="text-5xl md:text-7xl font-black text-white mb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 [@media(max-height:740px)]:text-5xl">
           My{" "}
           <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
             Projects
           </span>
         </h2>
 
-        <div className="w-32 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full mb-12"></div>
+        <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full mb-10 [@media(max-height:740px)]:mb-8"></div>
 
         {/* Message */}
-        <p className="text-2xl md:text-4xl font-light text-gray-400 leading-relaxed">
+        <p className="text-xl md:text-3xl font-light text-gray-400 leading-relaxed">
           Exciting things are being built right now...
         </p>
 
-        <p className="text-xl md:text-2xl text-gray-500 mt-8 max-w-2xl mx-auto">
+        <p className="text-lg md:text-2xl text-gray-500 mt-6 max-w-2xl mx-auto [@media(max-height:740px)]:mt-4">
           Full-stack applications, clean UI designs, and real-world solutions
           <br />
           <span className="hidden md:block" />
@@ -30,13 +30,15 @@ export default function Projects() {
         </p>
 
         {/* Decorative animated dots */}
-        <div className="flex justify-center gap-3 mt-12">
+        <div className="flex justify-center gap-3 mt-10 [@media(max-height:740px)]:mt-8">
           <span className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"></span>
           <span className="w-3 h-3 bg-blue-500 rounded-full animate-bounce delay-150"></span>
           <span className="w-3 h-3 bg-cyan-600 rounded-full animate-bounce delay-300"></span>
         </div>
 
-        <p className="text-gray-500 mt-10 text-lg">Stay tuned</p>
+        <p className="text-gray-500 mt-8 text-base md:text-lg [@media(max-height:740px)]:mt-6">
+          Stay tuned
+        </p>
       </div>
     </section>
   );

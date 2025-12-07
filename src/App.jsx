@@ -9,14 +9,13 @@ import Contact from "./MainContent/Contact";
 export default function App() {
   return (
     <>
-      <NavBar />
-      <main>
-        <Home />
-        <About />
+      <div className="scroll-smooth scroll-pt-20 pt-20 bg-gray-900">
+        <NavBar />
+        <Home /> <About />
         <Skills />
         <Projects />
         <Contact />
-      </main>
+      </div>
     </>
   );
 }
